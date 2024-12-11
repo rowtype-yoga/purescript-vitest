@@ -1,0 +1,22 @@
+package:
+  name: vitest
+  dependencies:
+    - console: ">=6.1.0 <7.0.0"
+    - effect: ">=4.0.0 <5.0.0"
+    - js-promise-aff: ">=1.0.0 <2.0.0"
+    - prelude: ">=6.0.1 <7.0.0"
+    - web-dom: ">=6.0.0 <7.0.0"
+    - web-html: ">=4.1.0 <5.0.0"
+  publish:
+    version: 1.0.0
+    license: WTFPL
+    location:
+      githubOwner: rowtype-yoga
+      githubRepo: purescript-vitest
+  test:
+    main: Test.Main
+    dependencies: []
+workspace:
+  packageSet:
+    registry: 61.3.1
+  extraPackages: {}
