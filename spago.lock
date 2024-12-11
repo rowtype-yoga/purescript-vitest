@@ -9,9 +9,6 @@
               "aff": ">=7.0.0 <9.0.0"
             },
             {
-              "console": ">=6.1.0 <7.0.0"
-            },
-            {
               "effect": ">=4.0.0 <5.0.0"
             },
             {
@@ -49,7 +46,6 @@
             "aff",
             "arrays",
             "bifunctors",
-            "console",
             "const",
             "contravariant",
             "control",
@@ -684,15 +680,6 @@
         "newtype",
         "prelude",
         "tuples"
-      ]
-    },
-    "console": {
-      "type": "registry",
-      "version": "6.1.0",
-      "integrity": "sha256-CxmAzjgyuGDmt9FZW51VhV6rBPwR6o0YeKUzA9rSzcM=",
-      "dependencies": [
-        "effect",
-        "prelude"
       ]
     },
     "const": {
