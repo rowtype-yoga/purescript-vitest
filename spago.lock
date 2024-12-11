@@ -5,12 +5,31 @@
         "path": "./",
         "core": {
           "dependencies": [
-            "console",
-            "effect",
-            "js-promise-aff",
-            "prelude",
-            "web-dom",
-            "web-html"
+            "aff",
+            {
+              "console": ">=6.1.0 <7.0.0"
+            },
+            {
+              "effect": ">=4.0.0 <5.0.0"
+            },
+            "exceptions",
+            "js-promise",
+            {
+              "js-promise-aff": ">=1.0.0 <2.0.0"
+            },
+            "maybe",
+            "nullable",
+            {
+              "prelude": ">=6.0.1 <7.0.0"
+            },
+            "transformers",
+            "unsafe-coerce",
+            {
+              "web-dom": ">=6.0.0 <7.0.0"
+            },
+            {
+              "web-html": ">=4.1.0 <5.0.0"
+            }
           ],
           "build_plan": [
             "aff",
