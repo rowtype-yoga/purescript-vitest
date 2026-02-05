@@ -9,15 +9,16 @@ import Effect.Unsafe (unsafePerformEffect)
 import Promise (Promise)
 import Promise.Aff as Promise
 
-foreign import data ViTest :: Type
+type ViTest = Unit
 
-foreign import testImpl :: EffectFn2 String (Effect (Promise (Unit))) ViTest
-test :: String -> Aff Unit -> Effect ViTest
+foreign import testImpl :: EffectFn2 String (Effect (Promise (Unit))) Unit
+
+test :: String -> Aff Unit -> Effect Unit
 test desc = runEffectFn2 testImpl desc <<< Promise.fromAff
 
-foreign import describeImpl :: EffectFn2 String (Effect ViTest) ViTest
+foreign import describeImpl :: EffectFn2 String (Effect Unit) Unit
 
-describe :: String -> Effect ViTest -> Effect ViTest
+describe :: String -> Effect Unit -> Effect Unit
 describe = runEffectFn2 describeImpl
 
 viTest :: Effect ViTest -> ViTest
