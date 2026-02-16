@@ -1,0 +1,13 @@
+{
+  "name": "purescript-vitest-dev",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:browser": "vitest run --project browser"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.0",
+    "jsdom": "^24.0.0"
+  }
+}
