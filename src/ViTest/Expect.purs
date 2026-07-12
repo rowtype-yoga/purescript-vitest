@@ -15,10 +15,12 @@ infixl 1 expectToBe as ====
 
 foreign import unsafeStringify :: forall a. a -> String
 
-foreign import expectToEqualImpl :: forall a. a -> a -> Effect Unit
+foreign import expectToEqualFailureImpl :: forall a. a -> a -> Effect Unit
 
 expectToEqual :: forall a. Eq a => a -> a -> Aff Unit
-expectToEqual a b = liftEffect $ expectToEqualImpl a b
+expectToEqual actual expected
+  | actual == expected = pure unit
+  | otherwise = liftEffect $ expectToEqualFailureImpl actual expected
 
 infixl 1 expectToEqual as ===
 
